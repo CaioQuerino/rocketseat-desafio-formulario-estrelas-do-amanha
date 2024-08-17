@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <link rel="shortcut icon" href="assets/icons/Interface icons/form-svgrepo-com.svg" type="image/x-icon">
+    <title>Estrelas do amanhã</title>
+    <link rel="shortcut icon" href="assets/icons/Interface_icons/form-svgrepo-com.svg" type="image/x-icon">
     <link rel="stylesheet" href="src/css/index.css" type="text/css">
+    <script src="src/js/script.js"></script>
 </head>
 <body>
     <main class="container-form">
 
         <form>
-            <div class="item-container"><span><img src="assets/icons/Interface icons/arrow-left-02.svg" alt="Seta para voltar"></span><h4>Voltar</h4></div>
+            <div class="item-container"><span><img src="assets/icons/Interface_icons/arrow-left-02.svg" alt="Seta para voltar"></span><h4>Voltar</h4></div>
 
             <h2>Formulário de matrícula</h2>
             <h4>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</h4>
@@ -19,8 +20,8 @@
             <h4>Informações da criança</h4>
 
             <fieldset>
-                <label for="nome">Nome completo</label>
-                <input type="text" nome="nome" maxlength="50" minlength="30">
+                <label for="nome_crianca">Nome completo</label>
+                <input type="text" nome="nome_crianca" maxlength="50" minlength="30">
             </fieldset>
 
             <fieldset>
@@ -60,7 +61,7 @@
 
             <fieldset class="rua">
                 <fieldset>
-                    <label for="rua">RUA</label>
+                    <label for="rua">Rua</label>
                     <input type="text" nome="rua" id="rua">
                 </fieldset>
 
@@ -68,7 +69,63 @@
                     <label for="num">Número</label>
                     <input type="text" nome="num" id="num">
                 </fieldset>
+            </fieldset>
 
+            <fieldset class="localidade">
+                <fieldset>
+                    <label for="cidade">Cidade</label>
+                    <select name="cidade"  class="cidade">
+                        <option value="">Selecione</option>
+                        <option value="rio-de-janeiro">Rio de Janeiro</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="sao-gonçalo">São Gonçalo</option>
+                        <option value="sao-gonçalo">Recife</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="estado">Estado</label>
+                    <select name="estado" class="estado">
+                        <option value="">Selecione</option>
+                        <option value="rj">RJ</option>
+                        <option value="sao-paulo">SP</option>
+                        <option value="sao-gonçalo"></option>
+                        <option value="sao-gonçalo"></option>
+                    </select>
+                </fieldset>
+            </fieldset>
+
+            <h4>Informações do responsável</h4>
+            <fieldset>
+                <label for="nome">Nome do responsável</label>
+                <input type="text" nome="nome" maxlength="50" minlength="30">
+                <span>Principal responsável legal e contato de emergência</span>
+            </fieldset>
+
+            <fieldset>
+                <label for="tel">Telefone</label>
+                <input type="text" nome="tel" id="tel" maxlength="14" oninput="formatarTelefone(this)">
+            </fieldset>
+
+            <fieldset>
+                <label for="tel">E-mail</label>
+                <input type="text" nome="mail" id="mail" oninput="formatarEmail(this)">
+            </fieldset>
+
+            <h4>Opções de matrícula</h4>
+
+            <fieldset class="option-matric">
+                <label for="turno">Selecione o turno de estudo</label>
+
+                <div class="turno-manha">
+                    <input type="radio" name="turno" value="manha"><h4>Manhã</h4>
+                        <img src="assets/icons/Illustration icons/sun-cloud-02.svg" alt="">
+                </input>
+
+
+                </div>
+
+                <div><input type="radio" name="turno" value="tarde"><h4>Tarde</h4></input></div>
             </fieldset>
 
         </form>
