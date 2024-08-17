@@ -23,15 +23,124 @@
     --violet: #C3B2E7;
     --pink: #F682A5;
     --font: "Poppins", sans-serif;
-    --line-height: 1.2;
     --font-weight: bold;
-    --h1: normal var(--font-weight) 3em var(--font) var(var(--line-height));
-    --h2: normal var(--font-weight) 1.5em var(--font) var(var(--line-height));
-    --h3: normal var(--font-weight) 1.25em var(--font) var(var(--line-height));
+    --h1: normal var(--font-weight) 2em var(--font);
+    --h2: normal var(--font-weight) 1.5em var(--font);
+    --h3: normal var(--font-weight) 1.25em var(--font);
+    --h4: normal 400 1em var(--font);
+    --label: normal 400 .875em var(--font);
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+}
+
+body{
+    display: grid;
+    max-width: 1440px;
+    padding: 4rem;
+}
+
+h1{
+    font: var(--h1);
+}
+
+h2{
+    font: var(--h2);
+    margin-top: 24px;
+    color: var(--text-primary);
+}
+
+h3{
+    font: var(--h3);
+}
+
+h4{
+    font: var(--h4);
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+}
+
+label{
+    font: var(--label);
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+label,input{
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea{
+    width: 100%;
+    max-width: 528px;
+    border: 1px solid var(--stroke-default);
+    padding: 16px 12px;
+    border-radius: 8px;
+    font: var(--h4);
+}
+
+textarea{
+    padding: 16px;
+    height: 120px;
+}
+
+input[type="file"]{
+
+}
+
+fieldset{
+    margin-bottom: 24px;
+}
+
+form>h4:nth-child(4),
+form>h4:nth-child(10){
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.item-container{
+    display: flex;
+    gap: 8px;
+    justify-content: left;
+}
+
+.container-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+form{
+    padding: 4rem;
+}
+
+.rua{
+    display: flex;
+    gap: 20px;
+}
+
+#rua{
+    max-width: 332px;
+    width: 300px;
+    display: flex;
+}
+
+#num{
+    width: max-content;
+}
+
+picture{
+    display: flex;
+    justify-content: center;
+}
+
+picture>img{
+    width: 30%;
+    position: fixed;
 }
