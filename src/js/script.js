@@ -31,3 +31,4 @@ const validateEmail = (input) => {
         errorContainer.style.display = 'flex';
     }
 }
+

@@ -1,0 +1,58 @@
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+input[type="date"]:focus-within,
+select:focus,
+.turno-manha:focus{
+    outline: 2px solid var(--surface-secondary);
+    border: 2px solid var(--stroke-highlight);
+}
+
+label,input{
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select,
+textarea{
+    appearance: none;
+    width: 100%;
+    max-width: 528px;
+    border: 2px solid var(--stroke-default);
+    padding: 1rem .75rem;
+    border-radius: 8px;
+    font: var(--h4);
+}
+
+select{
+    background: url("../../../assets/icons/Interface_icons/arrow-down-01.svg")no-repeat calc(100% - 1rem);
+    
+}
+
+input[type="date"]{
+    position: relative;
+}
+
+::-webkit-calendar-picker-indicator{
+    opacity: 0;
+}
+
+input[type="date"]::before{
+    content: "";
+    position: absolute;
+    background: url("../../../assets/icons/Interface_icons/calendar-03.svg")center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+textarea{
+    padding: 1rem;
+    height: 120px;
+}
