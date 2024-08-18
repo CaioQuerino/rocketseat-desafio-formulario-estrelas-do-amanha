@@ -1,0 +1,10 @@
+@media(max-width: 1125px){
+    .container-form{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        & picture>img{
+            display: none;
+        }
+    }
+}
