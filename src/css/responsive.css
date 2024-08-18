@@ -2,9 +2,24 @@
     .container-form{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+
+        & form{
+            padding: 0 24px;
+        }
 
         & picture>img{
             display: none;
         }
+    }
+
+    body{
+        padding: 12px 24px;
+    }
+}
+
+@media(max-width: 635px){
+    .radio-wrapper{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
