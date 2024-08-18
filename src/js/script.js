@@ -7,7 +7,7 @@ const formatarTelefone = (input) => {
     input.value = tel;
 }
 
-function validarEmail(input) {
+const validarEmail = (input) => {
     const dominio = '@rocketseat.com.br';
     let valor = input.value;
 
@@ -19,5 +19,15 @@ function validarEmail(input) {
         input.value = valor + dominio;
     } else {
         input.value = valor;
+    }
+}
+
+const validateEmail = (input) => {
+    const errorContainer = input.nextElementSibling;
+    
+    if (input.checkValidity()) {
+        errorContainer.style.display = 'none';
+    } else {
+        errorContainer.style.display = 'flex';
     }
 }

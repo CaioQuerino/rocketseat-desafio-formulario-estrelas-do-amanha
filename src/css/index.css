@@ -78,6 +78,7 @@ span{
 
 
 input[type="text"]:focus,
+input[type="email"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 input[type="date"]:focus-within,
@@ -93,6 +94,7 @@ label,input{
 
 input[type="text"],
 input[type="date"],
+input[type="email"],
 select,
 textarea{
     appearance: none;
@@ -241,4 +243,29 @@ picture>img{
             stroke: var(--stroke-highlight);
         }
     }
+}
+
+input#email:invalid {
+    border: 0.125rem solid var(--semantic-error);
+}
+
+input#email:valid {
+    border: 0.125rem solid var(--stroke-default);
+}
+
+.erro {
+    display: none;
+    color: var(--semantic-error);
+    font: var(--h4);
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.erro img {
+    margin-right: 8px;
+}
+
+input#email:invalid + .erro {
+    display: flex;
 }
